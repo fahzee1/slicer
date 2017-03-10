@@ -18,13 +18,14 @@ Now start the Django test server and login as the user you just created, and
 navigate to the image series page.  Click the "add" button, and upload one of the sample zip-archives
 containing DICOM files.
 
-You should see it in the "home" page of the site (e.g. 127.0.0.1:8000/).
+You should see it in the "home" page of the site (e.g. 127.0.0.1:8000/).  There
+should be one row for each archive you uploaded.  The "View" link in the table
+doesn't do anything.
 
 ## Overview
 
-There should be one row for each archive you uploaded.  The "View" link in the table doesn't do anything.
-
-In this challenge your job is to create a simple 3D-image-slice viewer.
+In this challenge your job is to create a simple 3D-image-slice viewer, and
+link it to these dead links in the image series table.
 
 ## Part I - Create Slices
 
