@@ -47,8 +47,9 @@ allows the user to quickly step through the stack of images (e.g. a slider),
 
 As you code, create logical commits with good commit messages.
 
-To submit your solution, please zip up your code repository, and email me the 
-full solution.  Alternatively, feel free to fork the repo on Github.  Either way works.
+To submit your solution, please zip up your code repository, and email it to
+`info@innolitics.com`.  Alternatively, you can fork this repository and email
+me a link.
 
 If you have any questions about the requirements, ask!  Part of being a good
 engineer is knowing when to clarify requirements.
