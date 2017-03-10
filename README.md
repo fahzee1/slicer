@@ -45,11 +45,12 @@ allows the user to quickly step through the stack of images (e.g. a slider),
 
 ## Other Details
 
+Please do not fork this repository, and instead work on a local copy of the repository.
+
 As you code, create logical commits with good commit messages.
 
-To submit your solution, please zip up your code repository, and email it to
-`info@innolitics.com`.  Alternatively, you can fork this repository and email
-me a link.
+To submit your solution, please zip up your entire repository, and email it to
+`info@innolitics.com`.
 
 If you have any questions about the requirements, ask!  Part of being a good
 engineer is knowing when to clarify requirements.
