@@ -14,11 +14,12 @@ to create a super user (so you can login to the admin).  You can do this by runn
     python manage.py migrate
     python manage.py createsuperuser
 
-Now start the Django test server and login as the user you just created, and
-navigate to the image series page.  Click the "add" button, and upload one of the sample zip-archives
-containing DICOM files.
+Now start the Django test server and login as the user you just created (you
+will need to login at the admin page, e.g. http://127.0.0.1:8000/admin), and
+navigate to the image series page.  Click the "add" button, and upload one of
+the sample zip-archives containing DICOM files.
 
-You should see it in the "home" page of the site (e.g. 127.0.0.1:8000/).  There
+You should see it in the "home" page of the site (e.g. http://127.0.0.1:8000/).  There
 should be one row for each archive you uploaded.  The "View" link in the table
 doesn't do anything.
 
@@ -37,11 +38,19 @@ the voxel array is the axial dimension.
 
 Now create a new Django view and template that displays the set of PNGs you generated.
 
-Ensure that only one PNG is displayed at a time, and include a slider that
-allows the user to quickly slide through the stack of images.
+Ensure that only one PNG is displayed at a time, and include a mechanism that
+allows the user to quickly step through the stack of images (e.g. a slider),
+*without requiring a full page reload* to view each new image.
 
 ## Other Details
 
 As you code, create logical commits with good commit messages.
 
-If you have any questions about the requirements, ask!  Part of being a good engineer is knowing when to clarify requirements.
+If you have any questions about the requirements, ask!  Part of being a good
+engineer is knowing when to clarify requirements.
+
+## Notes
+
+Really, it would be better to generate the images in a separate task, outside
+of the request-response cycle.  For example, using a tool like celery.  This
+added too much complexity for this project.
