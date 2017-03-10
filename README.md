@@ -16,8 +16,9 @@ to create a super user (so you can login to the admin).  You can do this by runn
 
 Now start the Django test server and login as the user you just created (you
 will need to login at the admin page, e.g. http://127.0.0.1:8000/admin), and
-navigate to the image series page.  Click the "add" button, and upload one of
-the sample zip-archives containing DICOM files.
+navigate to the image series page.  Click the "add" button, and upload the
+sample zip-archives containing DICOM files.  Note you can find many more
+example DICOM sets online, for example at the [Cancer Imaging Archive](http://www.cancerimagingarchive.net).
 
 You should see it in the "home" page of the site (e.g. http://127.0.0.1:8000/).  There
 should be one row for each archive you uploaded.  The "View" link in the table
@@ -54,3 +55,6 @@ engineer is knowing when to clarify requirements.
 Really, it would be better to generate the images in a separate task, outside
 of the request-response cycle.  For example, using a tool like celery.  This
 added too much complexity for this project.
+
+Also note, usually it is not good to include a large zip file (like our
+example ct data set) in a repository.
