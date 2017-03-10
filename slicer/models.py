@@ -34,4 +34,4 @@ class ImageSeries(models.Model):
         super(ImageSeries, self).save(*args, **kwargs)
 
     class Meta:
-        verbose_name_plural = 'ImageSeries'
+        verbose_name_plural = 'Image Series'
