@@ -37,8 +37,7 @@ the voxel array is the axial dimension.
 Now create a new Django view and template that displays the set of PNGs you generated.
 
 Ensure that only one PNG is displayed at a time, and include a slider that
-allows the user to quickly slide through the stack of images.  You will
-probably need an API end point to do this.
+allows the user to quickly slide through the stack of images.
 
 ## Other Details
 
