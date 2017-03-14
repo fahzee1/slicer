@@ -3,9 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <title>Slicer Coding Challenge</title>
+    {% block "css" %}
+    {% endblock %}
+    {% block "head-js" %}
+    {% endblock %}
+    
   </head>
   <body>
+
     {% block "content" %}
+    {% endblock %}
+
+     {% block "js" %}
     {% endblock %}
   </body>
 </html>

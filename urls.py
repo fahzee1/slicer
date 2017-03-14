@@ -13,13 +13,17 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from django.conf import settings
+from django.conf.urls.static import static
 from django.conf.urls import url
 from django.contrib import admin
 
-from slicer.views import image_series_list
+from slicer.views import image_series_list, view_pngs
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', image_series_list),
-]
+    url(r'^series/(?P<id>\d+)$', view_pngs, name='series_detail'),
+
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block "css" %}
+<style type="text/css">
+    .galleria{ max-width: 700px; height: 400px; background: #000 }
+</style>
+{% endblock %}
+
+{% block "head-js" %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.5/galleria.min.js"></script>
+{% endblock %}
+
+{% block "content" %}
+<h1>Detail Images</h1>
+
+<div class="galleria">
+    {% for i in images %}
+    <img src="{{ i.png_file.url }}">
+    {% endfor %}
+</div>
+
+
+{% endblock %}
+
+
+{% block "js" %}
+<script type="text/javascript">
+$(document).ready(function(){
+(function() { 
+    Galleria.loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.4.5/themes/classic/galleria.classic.min.js');
+    Galleria.run('.galleria');
+    
+}());
+});
+
+</script>
+{% endblock %}
